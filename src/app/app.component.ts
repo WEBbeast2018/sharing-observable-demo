@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showComp2 = true;
+  toggleComp() {
+    this.showComp2 = !this.showComp2;
+  }
 }

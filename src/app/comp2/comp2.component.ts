@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DummyService } from '../dummy.service';
 
 @Component({
   selector: 'app-comp2',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp2.component.css']
 })
 export class Comp2Component implements OnInit {
-
-  constructor() { }
+  data;
+  constructor(private dummyService: DummyService) { }
 
   ngOnInit() {
+    this.data = this.dummyService.getData();
   }
-
 }
